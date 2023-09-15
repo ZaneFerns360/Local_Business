@@ -20,7 +20,7 @@ export default function Navbar() {
     <>
       <div className="dark w-full" style={{ zIndex: '5' }}>
         <nav className="sticky top-0 border-gray-200 bg-white dark:bg-gray-900">
-          <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
+          <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-3">
             <Link href="#" className="flex items-center">
               <img
                 src="img/BrainWave.png"
@@ -62,7 +62,7 @@ export default function Navbar() {
               // <!-- drawer component -->
               <div
                 //   id="drawer-navigation"
-                className="fixed left-0 top-0 z-40 h-screen w-64 overflow-y-auto bg-white p-4 transition-transform dark:bg-gray-800"
+                className="fixed left-0 top-0 z-40 h-screen w-64 overflow-y-auto bg-white p-3 transition-transform dark:bg-gray-800"
                 style={{ zIndex: '5' }}
                 // tabindex="-1"
               >
@@ -138,10 +138,10 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/courses"
+                    href="/box"
                     className="block rounded py-2 pl-3 pr-4 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
                   >
-                    Courses
+                    Shops
                   </Link>
                 </li>
                 <li>
@@ -149,18 +149,30 @@ export default function Navbar() {
                     href="/certificates"
                     className="block rounded py-2 pl-3 pr-4 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
                   >
-                    Certificates
+                    Events & Discounts
                   </Link>
                 </li>
                 <li>
                   {user ? (
-                    <button
-                      type="button"
-                      className="mr-3 rounded-lg bg-blue-700 px-4 py-2 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 md:mr-0"
-                      onClick={() => auth.signOut()}
-                    >
-                      Logout
-                    </button>
+                    <div className="flex flex-row ">
+                      {' '}
+                      <div className="pr-5">
+                        {' '}
+                        <button
+                          type="button"
+                          className="mr-3 rounded-lg bg-blue-700 px-4 py-2 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 md:mr-0"
+                          onClick={() => auth.signOut()}
+                        >
+                          Logout
+                        </button>
+                      </div>
+                      <Link
+                        className="mr-3 rounded-lg bg-blue-700 px-4 py-2 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 md:mr-0 "
+                        href="/userDetails"
+                      >
+                        Add a business
+                      </Link>
+                    </div>
                   ) : (
                     <div className="flex flex-row items-center justify-center">
                       <div>
@@ -169,7 +181,7 @@ export default function Navbar() {
                           className="mr-3 rounded-lg bg-blue-700 px-4 py-2 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 md:mr-0"
                           onClick={() => signInWithGoogle()}
                         >
-                          Login with Google
+                          Login As User
                         </button>
                       </div>
                       <div className="pl-4">
@@ -177,7 +189,7 @@ export default function Navbar() {
                           className="mr-3 rounded-lg bg-blue-700 px-4 py-2 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 md:mr-0"
                           href="/login"
                         >
-                          Login with email
+                          Login for business
                         </Link>
                       </div>
                     </div>
@@ -191,8 +203,8 @@ export default function Navbar() {
                           <Image
                             src={
                               user.emailVerified
-                                ? '/assets/BrainWave.png'
-                                : '/assets/user.png'
+                                ? '/assets/user.png'
+                                : '/assets/BrainWave.png'
                             }
                             alt="User photo"
                             height={40}
