@@ -9,12 +9,12 @@ const Footer = () => {
             <div className="mb-6 md:mb-0">
               <a href="#" className="flex items-center">
                 <img
-                  src="img/BrainWave.png"
+                  src="img/BrainWave.jpg"
                   className="mr-3 h-8"
                   alt="BrainWave Logo"
                 />
                 <span className="self-center whitespace-nowrap text-2xl font-semibold dark:text-white">
-                  BrainWave
+                  Urban Unite
                 </span>
               </a>
             </div>
@@ -30,14 +30,10 @@ const Footer = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:underline">
-                      Courses
-                    </a>
+                    <a href="#" className="hover:underline"></a>
                   </li>
                   <li>
-                    <a href="#" className="hover:underline">
-                      Certificates
-                    </a>
+                    <a href="#" className="hover:underline"></a>
                   </li>
                 </ul>
               </div>
@@ -87,7 +83,7 @@ const Footer = () => {
             <span className="text-sm text-gray-500 dark:text-gray-400 sm:text-center">
               © 2023{' '}
               <a href="" className="hover:underline">
-                BrainWave
+                Urban Unite
               </a>
               . All Rights Reserved.
             </span>

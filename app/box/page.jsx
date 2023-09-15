@@ -26,25 +26,28 @@ export default function Box() {
 
   return (
     <>
-      <div class="body-font text-gray-600">
-        <div class="container mx-auto px-5 py-24">
-          <div class="-m-4 flex flex-wrap">
+      <div className="body-font text-gray-600">
+        <div className="flex flex-row items-center justify-center pt-20">
+          <h1 className="text-3xl font-bold">Locations near you</h1>
+        </div>
+        <div className="container mx-auto px-5 py-24">
+          <div className="-m-4 flex flex-wrap">
             {businesses.map((business, index) => (
-              <div key={index} class="p-4 md:w-1/2 xl:w-1/4">
+              <div key={index} className="p-4 md:w-1/2 xl:w-1/4">
                 <Link href={`/bus/${business.uid}`}>
-                  <div class="rounded-lg bg-gray-100 p-6">
+                  <div className="rounded-lg bg-gray-100 p-6">
                     <img
-                      class="mb-6 h-40 w-full rounded object-cover object-center"
+                      className="mb-6 h-40 w-full rounded object-cover object-center"
                       src={business.photoURL}
                       alt={business.businessName}
                     />
-                    <h3 class="title-font text-xs font-medium tracking-widest text-indigo-500">
+                    <h3 className="title-font text-xs font-medium tracking-widest text-indigo-500">
                       {business.typeOf}
                     </h3>
-                    <h2 class="title-font mb-4 text-lg font-medium text-gray-900">
+                    <h2 className="title-font mb-4 text-lg font-medium text-gray-900">
                       {business.businessName}
                     </h2>
-                    <p class="text-base leading-relaxed">
+                    <p className="text-base leading-relaxed">
                       Phone no: {business.phoneNumber}
                     </p>
                   </div>

@@ -30,7 +30,7 @@ export default function Content() {
                 Live Feedback
               </h2>
               <p className="text-base leading-relaxed">
-                Real time order delivery and status
+                Real time comment section
               </p>
             </div>
           </div>

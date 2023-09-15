@@ -1,7 +1,7 @@
 import { ChevronRight } from 'lucide-react'
 import React from 'react'
 import Content from './Content'
-
+import Link from 'next/link'
 const Hero = () => {
   return (
     <div className="">
@@ -14,13 +14,13 @@ const Hero = () => {
             Empower Your Community, Shop Local
           </p>
           <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-x-4 sm:space-y-0">
-            <a
-              href="#"
+            <Link
+              href="/userDetails"
               className="inline-flex items-center justify-center rounded-lg bg-blue-700 px-5 py-3 text-center text-base font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
             >
               Get started
               <ChevronRight className="ml-2" />
-            </a>
+            </Link>
             <a
               href="#"
               className="inline-flex items-center justify-center rounded-lg border border-gray-300 px-5 py-3 text-center text-base font-medium text-gray-900 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-800"

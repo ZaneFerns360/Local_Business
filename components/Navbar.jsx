@@ -23,12 +23,12 @@ export default function Navbar() {
           <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-3">
             <Link href="#" className="flex items-center">
               <img
-                src="img/BrainWave.png"
+                src="img/BrainWave.jpg"
                 className="mr-3 h-8"
                 alt="BrainWave Logo"
               />
               <span className="self-center whitespace-nowrap text-2xl font-semibold dark:text-white">
-                BrainWave
+                Urban Unite
               </span>
             </Link>
             <button
@@ -71,12 +71,12 @@ export default function Navbar() {
                     <li className="mb-5">
                       <Link href="#" className="flex items-center">
                         <img
-                          src="img/BrainWave.png"
+                          src="img/BrainWave.jpg"
                           className="mr-3 h-8"
                           alt="BrainWave Logo"
                         />
                         <span className="self-center whitespace-nowrap text-2xl font-semibold dark:text-white">
-                          BrainWave
+                          Urban Unite
                         </span>
                       </Link>
                     </li>
@@ -146,10 +146,10 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/certificates"
+                    href="/business"
                     className="block rounded py-2 pl-3 pr-4 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
                   >
-                    Events & Discounts
+                    My business
                   </Link>
                 </li>
                 <li>
@@ -181,7 +181,7 @@ export default function Navbar() {
                           className="mr-3 rounded-lg bg-blue-700 px-4 py-2 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 md:mr-0"
                           onClick={() => signInWithGoogle()}
                         >
-                          Login As User
+                          Login with Google
                         </button>
                       </div>
                       <div className="pl-4">
@@ -189,7 +189,7 @@ export default function Navbar() {
                           className="mr-3 rounded-lg bg-blue-700 px-4 py-2 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 md:mr-0"
                           href="/login"
                         >
-                          Login for business
+                          Login with Email
                         </Link>
                       </div>
                     </div>
@@ -204,7 +204,7 @@ export default function Navbar() {
                             src={
                               user.emailVerified
                                 ? '/assets/user.png'
-                                : '/assets/BrainWave.png'
+                                : '/assets/BrainWave.jpg'
                             }
                             alt="User photo"
                             height={40}

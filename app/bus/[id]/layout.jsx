@@ -1,6 +1,6 @@
 import Footer from '@components/Footer'
 import Navbar from '@components/Navbar'
-export default function userLayout({ children }) {
+export default function busLayout({ children }) {
   return (
     <section>
       <Navbar />

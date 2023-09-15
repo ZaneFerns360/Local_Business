@@ -63,6 +63,7 @@ const Details = () => {
           phoneNumber: phoneNumber,
           location: address,
           photoURL: downloadURL,
+          uid: user.uid,
         },
         { merge: true }
       )
@@ -82,27 +83,27 @@ const Details = () => {
     <div className="flex flex-col items-center justify-center pb-48 pt-20">
       <h1 className="px-4 py-4 text-2xl font-bold">Add a New business</h1>
       <form className="glassmorphism" onSubmit={handleSubmit}>
-        <div class="mb-6">
+        <div className="mb-6">
           <label
-            for="email"
-            class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+            htmlFor="email"
+            className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
           >
             Business Name
           </label>
           <input
             type="text"
             id="name"
-            class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-blue-500 dark:focus:ring-blue-500"
+            className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-blue-500 dark:focus:ring-blue-500"
             placeholder="Pop Tates"
             required
             value={name}
             onChange={(event) => setName(event.target.value)}
           />
         </div>
-        <div class="mb-6">
+        <div className="mb-6">
           <label
-            for="password"
-            class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+            htmlFor="password"
+            className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
           >
             Type of Business
           </label>
@@ -110,16 +111,16 @@ const Details = () => {
             type="text"
             id="Type"
             placeholder="Bookshop, Hotel..."
-            class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-blue-500 dark:focus:ring-blue-500"
+            className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-blue-500 dark:focus:ring-blue-500"
             required
             value={type}
             onChange={(event) => setType(event.target.value)}
           />
         </div>
-        <div class="mb-6">
+        <div className="mb-6">
           <label
-            for="password"
-            class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+            htmlFor="password"
+            className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
           >
             Address of Business
           </label>
@@ -127,23 +128,23 @@ const Details = () => {
             type="text"
             id="address"
             placeholder="420 Nagori Lane...."
-            class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-blue-500 dark:focus:ring-blue-500"
+            className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-blue-500 dark:focus:ring-blue-500"
             required
             value={address}
             onChange={(event) => setAddress(event.target.value)}
           />
         </div>
-        <div class="mb-6">
+        <div className="mb-6">
           <label
-            for="repeat-password"
-            class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+            htmlFor="repeat-password"
+            className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
           >
             Business Phone no.
           </label>
           <input
             type="text"
             id="phoneNumber"
-            class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-blue-500 dark:focus:ring-blue-500"
+            className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-blue-500 dark:focus:ring-blue-500"
             required
             placeholder="7021022888"
             value={phoneNumber}
@@ -152,35 +153,35 @@ const Details = () => {
         </div>
         <div className="mb-6">
           <label
-            class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-            for="file_input"
+            className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+            htmlFor="file_input"
           >
             Upload Photo
           </label>
           <input
-            class="block w-full cursor-pointer rounded-lg border border-gray-300 bg-gray-50 text-sm text-gray-900 focus:outline-none dark:border-gray-600 dark:bg-gray-700 dark:text-gray-400 dark:placeholder-gray-400"
+            className="block w-full cursor-pointer rounded-lg border border-gray-300 bg-gray-50 text-sm text-gray-900 focus:outline-none dark:border-gray-600 dark:bg-gray-700 dark:text-gray-400 dark:placeholder-gray-400"
             id="file_input"
             type="file"
           />
         </div>
-        <div class="mb-6 flex items-start">
-          <div class="flex h-5 items-center">
+        <div className="mb-6 flex items-start">
+          <div className="flex h-5 items-center">
             <input
               id="terms"
               type="checkbox"
               value=""
-              class="focus:ring-3 h-4 w-4 rounded border border-gray-300 bg-gray-50 focus:ring-blue-300 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-800"
+              className="focus:ring-3 h-4 w-4 rounded border border-gray-300 bg-gray-50 focus:ring-blue-300 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-800"
               required
             />
           </div>
           <label
-            for="terms"
-            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            htmlFor="terms"
+            className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
           >
             I agree with the{' '}
             <Link
               href="#"
-              class="text-blue-600 hover:underline dark:text-blue-500"
+              className="text-blue-600 hover:underline dark:text-blue-500"
             >
               terms and conditions
             </Link>
@@ -189,7 +190,7 @@ const Details = () => {
         {error && <p className="py-4 text-red-700">{error}</p>}
         <button
           type="submit"
-          class="rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          className="rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
           Add details
         </button>
